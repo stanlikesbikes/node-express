@@ -28,7 +28,7 @@ campsiteRouter.route('/:campsiteId')
     next();
 })
 .get((req, res) => {
-    res.end('Will send all the campsites to you from /:campsiteId');
+    res.end(`Will send all the campsites ${req.params.campsiteId} to you from /:campsiteId`);
 })
 .post((req, res) => {
     res.end(`Will add the campsite: ${req.body.name} with description: ${req.body.description} from /:campsiteId`);

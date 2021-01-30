@@ -27,7 +27,7 @@ promotionRouter.route('/:promotionId')
     next();
 })
 .get((req, res) => {
-    res.end('Will send all the promotions to you from :promotionId');
+    res.end(`Will send all the promotions ${req.params.promotionId} to you from :promotionId`);
 })
 .post((req, res) => {
     res.end(`Will add the promotions: ${req.body.name} with description: ${req.body.description} from :promotionId`);

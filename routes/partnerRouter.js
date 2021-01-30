@@ -27,7 +27,7 @@ partnerRouter.route('/:partnerId')
     next();
 })
 .get((req, res) => {
-    res.end('Will send all partners to you from :partnerId');
+    res.end(`Will send all partners ${req.params.partnerId} to you from :partnerId`);
 })
 .put((req, res) => {
     res.end(`Will add the partners: ${req.body.name} with description ${req.body.description} from :partnerId`);
